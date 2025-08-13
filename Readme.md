@@ -184,7 +184,7 @@ Before you begin, ensure you have the following installed:
 
    ```bash
    git clone:https://github.com/kigehiflorence/movie-reccomder-app-project-nexus
-   cd MERN_Movie_Recomendation
+   cd movie-reccomender
    ```
 
 2. Install backend dependencies:
