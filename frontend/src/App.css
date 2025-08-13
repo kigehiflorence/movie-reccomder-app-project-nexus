@@ -1,75 +1,126 @@
 /* App.css */
-
-/* Import Poppins font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-
-  background-color: rgba(255, 192, 203, 0.6); /* baby pink overlay */
-  background-blend-mode: lighten;
-  color: #000; /* changed font color to black */
   line-height: 1.6;
-  letter-spacing: 0.5px; /* adds spacing between letters */
+  letter-spacing: 0.5px;
+  color: #000;
+  background: linear-gradient(to bottom, #ffe4e1 0%, #fff0f5 100%);
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Hero section */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 20px 20px;
+  text-align: center;
+}
+
+.app-title {
+  font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 1px; /* increases spacing for headings */
-  text-transform: uppercase; /* makes headings stand out */
-  text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.5); /* subtle pink shadow */
-  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(255, 182, 193, 0.7);
+  margin-bottom: 15px;
 }
 
-p, span, li {
-  font-weight: 400;
-  letter-spacing: 0.5px; /* spacing for body text */
-  line-height: 1.6;
+.app-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-button, input {
+.app-description {
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.highlight-red { color: #ff4d6d; font-weight: 600; }
+.highlight-blue { color: #3b82f6; margin-left: 3px; font-weight: 500; }
+
+/* Form styling */
+.input-field {
   font-family: 'Poppins', sans-serif;
-  background-color: #ffb6c1;
-  color: #000; /* black text on buttons */
+}
+
+.submit-btn {
   font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  cursor: pointer;
+  background-color: #ff4d6d;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 25px;
   transition: all 0.3s ease;
 }
 
-button:hover, input:hover {
-  background-color: #ffc0cb; /* lighter pink on hover */
-  transform: translateY(-2px); /* subtle hover lift effect */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+.submit-btn:hover {
+  background-color: #ff7f91;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Movie Cards */
+.recommendations-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .movie-card {
-  background-color: rgba(255, 182, 193, 0.7);
-  border-radius: 16px;
+  background-color: rgba(255, 182, 193, 0.85);
+  border-radius: 20px;
   padding: 25px;
   margin: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  width: 250px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
-  letter-spacing: 0.5px;
-  color: #000; /* black font inside cards */
 }
 
 .movie-card:hover {
-  transform: scale(1.07);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.movie-card h2 {
+.movie-title { font-weight: 700; margin-bottom: 10px; font-size: 1.2rem; }
+.movie-text { font-size: 14px; margin-bottom: 5px; }
+.no-tagline { color: #ff4d6d; font-weight: 500; }
+
+.note {
+  margin-top: 30px;
   font-weight: 600;
-  margin-bottom: 10px;
+  color: #ff4d6d;
 }
 
-.movie-card p {
-  font-size: 14px;
-  line-height: 1.5;
+/* Footer / overview button */
+.overview-btn {
+  margin-top: 20px;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+/* Poster preview section */
+.poster-section {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.poster-section img {
+  width: 150px;
+  height: 220px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.poster-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }

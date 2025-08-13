@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 import NavBar from './Components/Navbar'
 import './App.css';
 
-
 function App() {
     const [movieName, setMovieName] = useState('')
     const [recommendations, setRecommendations] = useState([])
@@ -19,22 +18,21 @@ function App() {
             console.error('Error fetching recommendations', error)
         }
     }
-   
 
     return (
         <>
             <NavBar/>
-            <Container className="d-flex flex-column align-items-center" >
-                <h1 className="my-4" style={{ fontFamily: 'Poppins, sans-serif', fontWeight:'600' }}>Movie Recommender</h1>
-                <p className="my-2">
-                    (<span style={{ color: 'red' }}> <strong>MERN Stack, Django</strong> </span> based Movie recommendation app)
+            <Container className="d-flex flex-column align-items-center main-container">
+                <h1 className="my-4 app-title">Movie Recommender</h1>
+                <p className="my-2 app-subtitle">
+                    (<span className="highlight-red"><strong>MERN Stack, Django</strong></span> based Movie recommendation app)
                 </p>
-                <p>
+                <p className="app-description">
                     Type Movie name to get recommendations. e.g: 
-                    <span style={{ color: 'blue' }}> Avatar</span>, 
-                    <span style={{ color: 'blue' }}> Aliens vs Predator: Requiem</span>, 
-                    <span style={{ color: 'blue' }}> Spider-Man</span>,
-                    <span style={{ color: 'blue' }}> The Avengers</span> etc.
+                    <span className="highlight-blue"> Avatar</span>, 
+                    <span className="highlight-blue"> Aliens vs Predator: Requiem</span>, 
+                    <span className="highlight-blue"> Spider-Man</span>,
+                    <span className="highlight-blue"> The Avengers</span> etc.
                 </p>
                 <Form className="w-50">
                     <Form.Group controlId="movieName">
@@ -44,10 +42,12 @@ function App() {
                                 placeholder="Enter movie name"
                                 value={movieName}
                                 onChange={(e) => setMovieName(e.target.value)}
+                                className="input-field"
                             />
                             <Button
                                 variant="primary"
                                 onClick={fetchRecommendations}
+                                className="submit-btn"
                             >
                                 Get Recommendations
                             </Button>
@@ -58,18 +58,18 @@ function App() {
                     <Row>
                         {recommendations.map((movie) => (
                             <Col md={4} key={movie._id} className="mb-4">
-                                <Card>
+                                <Card className="movie-card">
                                     <Card.Body>
-                                        <Card.Title>{movie.title}</Card.Title>
+                                        <Card.Title className="movie-title">{movie.title}</Card.Title>
                                         {movie.tagline ? (
-                                            <Card.Subtitle className="mb-2 text-muted">Tagline: {movie.tagline}</Card.Subtitle>
+                                            <Card.Subtitle className="mb-2 text-muted movie-tagline">Tagline: {movie.tagline}</Card.Subtitle>
                                         ) : (
-                                            <Card.Subtitle className="mb-2" style={{ color: 'red' }}>No Tagline available</Card.Subtitle>
+                                            <Card.Subtitle className="mb-2 no-tagline">No Tagline available</Card.Subtitle>
                                         )}
-                                        <Card.Text>
+                                        <Card.Text className="movie-text">
                                             <strong>Release Date:</strong> {movie.release_date.slice(0, 10)}
                                         </Card.Text>
-                                        <Card.Text>
+                                        <Card.Text className="movie-text">
                                             <strong>Duration:</strong> {movie.runtime} Minutes
                                         </Card.Text>
                                     </Card.Body>
@@ -78,9 +78,9 @@ function App() {
                         ))}
                     </Row>
                 </Container>
-                <h5 style={{ color: 'red' }}>Note: Poster not available due to TMDB access issues.</h5>
+                <h5 className="note">Note: Poster not available due to TMDB access issues.</h5>
                 <Link to='/overview'>
-                    <Button variant="link" style={{ marginTop: '20px' }}>
+                    <Button variant="link" className="overview-btn">
                         Know more about the project
                     </Button>
                 </Link>
