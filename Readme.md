@@ -183,7 +183,7 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dipanjanpathak/MERN_Movie_Recomendation.git
+   git clone:https://github.com/kigehiflorence/movie-reccomder-app-project-nexus
    cd MERN_Movie_Recomendation
    ```
 
