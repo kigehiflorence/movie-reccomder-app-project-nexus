@@ -60,9 +60,7 @@ This program provided in-depth exposure to the following frontend engineering to
 ## 👥 Collaboration Hub
 
 ### Collaborate With:
-- **ProDev Backend Learners:** To integrate backend APIs and build complete, production-grade applications.
-- Joakim Bwire.
-
+Collaborated and used backend from another developer
 ---
 
 ## 📌 ProDev Tips
