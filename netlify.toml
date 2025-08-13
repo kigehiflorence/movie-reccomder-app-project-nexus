@@ -6,4 +6,4 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
   [plugins.inputs]
-    exclude = true
+    enable = false
