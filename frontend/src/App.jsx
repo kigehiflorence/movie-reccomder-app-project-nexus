@@ -3,6 +3,8 @@ import axios from 'axios'
 import { Container, Form, Button, Row, Col, Card, InputGroup } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import NavBar from './Components/Navbar'
+import './App.css';
+
 
 function App() {
     const [movieName, setMovieName] = useState('')
