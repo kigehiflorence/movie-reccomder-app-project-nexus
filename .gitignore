@@ -78,3 +78,4 @@ $RECYCLE.BIN/
 # Exclude everything from `data/`, but allow `data/processed/` to be tracked
 data/*
 !data/processed/
+# Untracked files

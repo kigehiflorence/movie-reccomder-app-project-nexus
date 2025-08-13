@@ -12,3 +12,4 @@ def load_pickle_file(file_path):
 
 movie_dict = load_pickle_file(MOVIE_DICT_PATH)
 similarity = load_pickle_file(SIMILARITY_PATH)
+# Configuration for movie recommendations

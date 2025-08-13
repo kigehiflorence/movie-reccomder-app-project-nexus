@@ -5,8 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
+  
   },
-  "author": "Dipanjan Pathak",
+  "author": "Florence Kigehi",
   "license": "ISC",
   "description": "",
   "dependencies": {

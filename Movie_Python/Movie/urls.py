@@ -7,3 +7,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('movie_api.urls')),
 ]
+#urls app

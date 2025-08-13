@@ -14,3 +14,5 @@ const movieSchema = new mongoose.Schema({
 
 Movie = mongoose.model('Movie', movieSchema, 'movies');
 module.exports = Movie
+
+//This is my backend 

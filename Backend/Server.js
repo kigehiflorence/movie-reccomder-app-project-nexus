@@ -77,6 +77,7 @@ app.get('/api/movies/:movieName', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`)
 })
+//Backend server
 
 
 

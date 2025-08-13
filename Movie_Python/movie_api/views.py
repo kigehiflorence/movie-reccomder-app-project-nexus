@@ -43,4 +43,4 @@ def recommended(request, movie_id):
         return Response({"error": "Movie not found"}, status=400)
     except Exception as e:
         return Response({"error": str(e)}, status=500)
-
+# Movie API views
